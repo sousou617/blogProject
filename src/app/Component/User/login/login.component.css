@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*, body {
+ 		margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+}
+ /* -----Blogosphere------- */
+/* .sign-up-pg { */
+	/* background-image: url('IMG/art-backlit-beach-256807.jpg'); */
+/* 	background-image: linear-gradient(rgba(0, 255, 255, 0.5));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	overflow: 
+} */
+
+/* .welcome {
+	text-align: center;
+	font-size: 50px;
+	color: rgb(27, 114, 18);
+	padding-top: 25px;
+	animation-delay: 1s;
+} */
+
+
+/* ------------Register Page------  */
+
+/* #register-page {
+	background: #f4f4f4;
+}
+.login-page {
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+
+.form {
+	position: relative;
+	z-index: 1;
+	background: rgba(255,255,255,0.4);
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 40px;
+	text-align: center;
+	padding-bottom: 14px;
+}
+
+.form input {
+	font-family: 'Roboto', sans-serif;
+	outline: 1;
+	background: #f4f4f4;
+	width: 100%;
+	border: 1px solid rgb(231,175,111);
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form button {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #f4f4f4;
+	font-size: 16px;
+	letter-spacing: 0.5em;
+}
+
+.form button:hover, .form button:active {
+	background: #43A047;
+}
+
+.form .message {
+	margin: 15px 0 0 0;
+	color: blackness(0%);
+	font-size: 14px;
+	padding: 3px;
+}
+
+.form .message a{
+	color: #4b4b4b;
+	text-decoration: none;
+	padding: 0 1px;
+	font-size: 15px;
+}
+
+
+.form .register-form {
+	display: none;
+}
+
+.ig-scroll {
+
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.cd-icon {	
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;	
+	animation-delay: 1s;
+} */
