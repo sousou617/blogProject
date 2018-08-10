@@ -1,0 +1,66 @@
+.card {
+	width: 33rem;
+	height: 35rem;	
+/* 	width: 400px;
+	margin: 10% auto; */
+}
+
+.reg-form {
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+	background-color: white;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 20px;
+	text-align: center;
+	padding-bottom: 10px;
+	/* box-sizing: border-box; */
+}
+h1, .reg-txt {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 600;
+	background-color: white;
+}
+.card {
+	width: 23rem;
+	height: 33rem;
+	background-color: white; 
+}
+
+.form-group, .row {
+	background-color: white;
+}
+
+form input {
+	font-family: 'Roboto', sans-serif;
+	outline: 1;
+	width: 100%;
+	/* border: 1px solid rgb(231,175,111); */
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+	background-color: white;
+}
+ 
+.clearfix {
+	background-color: white;
+}
+
+.cd-icon {	
+/* 	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;	
+	animation-delay: 1s; */
+	display: flex;
+  	height: 250px;
+  	justify-content: center;
+  	align-items: center;
+}

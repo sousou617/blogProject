@@ -1,174 +1,41 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.view {
-    background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
+
+/* Color1(whitesmoke)
+HEX: #F4F4F4
+RGB: 244 244 244
+
+Color2(DimGray)
+HEX: #3F3B3B
+RGB: 63 59 59
+
+Color3(LightGray)
+HEX: #CFCFD0
+RGB: 207 207 208
+
+Color4(DarkGray)
+HEX: #A2A2A3
+RGB: 162 162 163
+
+Color5(LightCoral)
+HEX: #DF6E69
+RGB: 223 110 105 */
+
 
 
 
 *, body {
  		margin: 0;
         padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        height: auto;
+        /* border: 0; */
+        max-width: 100%;
+        background-color: #f4f4f4;
         font-family: 'Roboto', sans-serif;
 }
 
-
-
-/* ------------Register Page------  */
-
-/* #register-page {
-	background: #f4f4f4;
-}
-.login-page {
-	width: 360px;
-	padding: 10% 0 0;
-	margin: auto;
-}
-
-.form {
-	position: relative;
-	z-index: 1;
-	background: rgba(255,255,255,0.4);
-	max-width: 360px;
-	margin: 0 auto 100px;
-	padding: 40px;
-	text-align: center;
-	padding-bottom: 14px;
-}
-
-.form input {
-	font-family: 'Roboto', sans-serif;
-	outline: 1;
-	background: #f4f4f4;
-	width: 100%;
-	border: 1px solid rgb(231,175,111);
-	margin: 0 0 15px;
-	padding: 15px;
-	box-sizing: border-box;
-	font-size: 14px;
-}
-
-.form button {
-	font-family: 'Roboto', sans-serif;
-	text-transform: uppercase;
-	outline: 0;
-	background: #4CAF50;
-	width: 100%;
-	border: 0;
-	padding: 15px;
-	color: #f4f4f4;
-	font-size: 16px;
-	letter-spacing: 0.5em;
-}
-
-.form button:hover, .form button:active {
-	background: #43A047;
-}
-
-.form .message {
-	margin: 15px 0 0 0;
-	color: blackness(0%);
-	font-size: 14px;
-	padding: 3px;
-}
-
-.form .message a{
-	color: #4b4b4b;
-	text-decoration: none;
-	padding: 0 1px;
-	font-size: 15px;
+.home-login {
+	/* background-color:  #f4f4f4; */
 }
 
 
-.form .register-form {
-	display: none;
-}
-
-.ig-scroll {
-
-    width: auto;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-.cd-icon {	
-	display: block;
-	width: fit-content;
-	margin-left: auto;
-	margin-right: auto;	
-	animation-delay: 1s;
-}
- */
-
-
-
-/* -----------Profile site----------- */
- 
- 
-
-/* Profile Main site */
-
-/* .cake-dirt-img {
-	height: 100vh;
-	width: auto;
-	background-repeat: no-repeat;
-	background-color: #F4F4F4;
-	background-position: top center;
-	padding-top: -50px;
-}
-hr {
-	color: black;
-}
-
-#copyright {
-	position: fixed;
-	bottom: 1px;
-	font-size: 12px;
-	left: 3px;
-	color: gray;
-} */
-
-
-/* home component html */
-
-
-/* .view {
-    background: url("http://i1253.photobucket.com/albums/hh583/cherylrbrown617/6974A4E4-46DD-44E0-9225-74D261B64CF2_zpsytgko7yx.jpeg")no-repeat center center;
-    background-size: cover;
-}
-
-.navbar {
-    background-color: transparent;
-}
-
-.top-nav-collapse {
-    background-color: #4285F4;
-}
-
-@media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
-}
-
- */
-
-/* --------- Media query ------------- */
-
-/* @media screen and (max-width: 480px){
-	.cake-dirt-img {
-
-	}
-}
-
-@media all and (max-width: 961px) {
-	
-} */ 

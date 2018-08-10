@@ -1,44 +1,111 @@
+<body class="home-login">
+  
 
-    <div class="container">
-        <a class="cd-icon animated bounce" routerLink="#"><img src="IMG/CandDgray.jpg"></a>
+<div class="form-inline">
+ 
+        <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
+ 
 
         <div *ngIf="errorFlag" class="alert alert-danger">Invalid username or password</div>
 
     <!-- Login form -->
-<form [formGroup]="loginForm">
-  <p class="h5 text-center mb-4">Sign in</p>
+    <form class="login-form card shadow p-3 mb-5 bg-info rounded" (ngSubmit)="login()" #f="ngForm">
+      <h1 class="login-txt">Login</h1>
 
-  <div class="md-form">
-    <i class="fa fa-envelope prefix grey-text"></i>
-    <input 
-    type="text" 
-    formControlName="defaultFormEmail" 
-    id="defaultForm-email" 
-    class="form-control" 
-    mdbInputDirective>
-    <label for="defaultForm-email">Your email</label>
-  </div>
+<!-- USERNAME -->
+        <div class="form-group row">
+            <input 
+            class="form-control"
+            type="text"
+            name="username" 
+            placeholder="Username" 
+            required
+            #username="ngModel"
+            ngModel
+            />
+        </div>
+        <span class="alert" *ngIf="username.invalid && username.touched">Please enter username!</span>
 
-  <div class="md-form">
-    <i class="fa fa-lock prefix grey-text"></i>
-    <input 
-    type="password" 
-    formControlName="defaultFormPass" 
-    id="defaultForm-pass" 
-    class="form-control" 
-    mdbInputDirective>
-    <label for="defaultForm-pass">Your password</label>
-  </div>
+<!-- PASSWORD -->
+      <div class="form-group row">
+            <input 
+            type="password"
+            id="password" 
+            name="password" 
+            placeholder="Password" 
+            class="form-control" 
+            required
+            ngModel
+            #password="ngModel"/>
+        </div>
+         <span class="alert" *ngIf="password.invalid && password.touched">Please enter password!</span><br>
 
-  <div class="text-center">
-    <input type="submit" mdbBtn color="default" sclass="waves-light" mdbWavesEffect value="Login">
-  </div>
-</form>
-<!-- Login form -->
+<!-- BUTTONS -->
+      <div class="clearfix">
+         <button class="btn btn-indigo btn-lg float-left" data-toggle="button" [disabled]="f.invalid" type="submit">Login</button>
+         <button type="button" class="btn btn-amber btn-lg float-right" routerLink="/register">Register</button>
+      </div>
+    </form>
 
- 
- <!-- SnapWidget -->
-    <footer class="ig-scroll">
-        <iframe src="https://snapwidget.com/embed/569557" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="overflow:hidden; border-spacing: 3px; width:800px; height:160px"></iframe>
-    </footer>
-  </div>
+</div> <!-- Login form -->
+
+
+</body>
+
+
+
+<!-- <map-sidenav-container>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span><img class="ccd-logo" src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+
+    <button mat-flat-button color="primary">About</button>
+    <button mat-flat-button color="primary">Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+    
+ <mat-card class="example-card">
+   <mat-card-header class="mat-display-1">
+     <mat-card-title>Login</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+     <form class="example-form">
+       <table class="example-full-width" cellspacing="0">
+         <tr>
+           <td>
+             <mat-form-field class="example-full-width">
+             <input 
+             matInput 
+             placeholder="Username" 
+             [(ngModel)]="username" 
+             name="username" 
+             required>
+             </mat-form-field>
+           </td>
+         </tr>
+         <tr>
+         <td><mat-form-field class="example-full-width">
+           <input 
+           matInput 
+           placeholder="Password" 
+           [(ngModel)]="password"
+           type="password" 
+           name="password" 
+           required>
+         </mat-form-field>
+        </td>
+        </tr>
+        </table>
+     </form>
+     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+   </mat-card-content>
+
+   <mat-card-actions>
+     <button mat-raised-button (click)="login()" color="primary">Login</button>
+   </mat-card-actions>
+ </mat-card>
+</map-sidenav-container> -->

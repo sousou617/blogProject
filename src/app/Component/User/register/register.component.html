@@ -1,73 +1,70 @@
 
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" routerLink="#">
-    <img src="./IMG/CandDgray.jpg" width="30" height="30" class="d-inline-block align-top" alt="Blog Logo">
-    Cupcakes & Dirt Blog
-  </a>
-</nav>
 
-<div class="row">
-	<div class="col s8 offset-s2">
-		<div class="card">
-			<div class="sm-jumbotron center-align">
-				<h2>Registration</h2>
-				<div>
+<div class="form-inline">
+	  <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
 
-			    <div *ngIf="usernameError"
-			       class="alert alert-danger" >
-			    Username is already taken!
-			    </div>
+         	<div *ngIf="usernameError"
+         		class="alert alert-danger" >
+         		Username is already taken!
+         	</div>
 
-			    <div *ngIf="passwordError"
-			       class="alert alert-danger" >
-			    Passwords do not match!
-			    </div>	
-			    				
-					<form class="col s12 white"
-					(ngSubmit)="register()" #f="ngForm">
-						<div class="row">
-							<div class="input-field col s6">
-								<input 
-								class="form-control" 
-								type="text" 
-								name="username"
-								#username="ngModel"
-								ngModel
-								required>
-								<span class="alert" *ngIf="username.invalid && username.touched">Please enter username!</span>
-							</div>
-							<div class="input-field col s6">
-								<input 
-								class="form-control" 
-								type="password" 
-								name="Password"
-								#password="ngModel" 
-								ngModel
-								required
-								minlength="3">
-								<span class="alert" *ngIf="password.invalid && password.touched">Please enter password!</span>
-							</div>
-							<div class="input-field col s6">
-							   <input 
-						        type="password" 
-						        name="verifyPassword"  
-						        class="form-control" 
-						        required 
-						        ngModel 
-						        #verifyPassword="ngModel">
-								<span class="alert" *ngIf="verifyPassword.invalid && verifyPassword.touched">Please verify password!</span>
-							</div>
-						</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<button type="button" class="btn btn-lg btn-outline-success waves-effect">Register</button>
-							<button type="button" class="btn btn-lg btn-outline-warning waves-effect" routerLink="">Cancel</button>
-						</div>					
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+         	<div *ngIf="passwordError"
+         	class="alert alert-danger" >
+         	Passwords do not match!
+            </div>	
+
+         <!-- Registration Form -->
+   <form class="reg-form card shadow p-3 mb-5 bg-info rounded" (ngSubmit)="register()" #f="ngForm">
+      <h1 class="reg-text">Sign Up</h1>
+         
+         <!-- USERNAME -->
+               <div class="form-group row">
+               	<input 
+               	class="form-control"
+               	type="text" 
+               	name="username"
+               	#username="ngModel"
+               	ngModel
+               	required
+               	placeholder="Username">
+               </div>
+               	<span class="alert" *ngIf="username.invalid && username.touched">Please enter username!</span>
+               
+
+         <!-- PASSWORD  -->
+               <div class="form-group row">
+               	<input 
+               	class="form-control" 
+               	type="password" 
+               	name="Password"
+               	#password="ngModel" 
+               	ngModel
+               	required
+               	minlength="3"
+               	placeholder="Password"/>
+               </div>
+               	<span class="alert" *ngIf="password.invalid && password.touched">Please enter password!</span>
+               
+
+         <!-- VERIFY PASSWORK -->
+         <div class="form-group">
+         	<input 
+         	type="password" 
+         	name="verifyPassword"  
+         	class="form-control" 
+         	required 
+         	ngModel 
+         	#verifyPassword="ngModel"
+         	placeholder="Verify Password"/>
+         </div>
+         	<span class="alert" *ngIf="verifyPassword.invalid && verifyPassword.touched">Please verify password!</span><br>
+         
+
+         <!-- BUTTONS -->
+         <div class="clearfix">
+         	<button type="button" class="btn btn-lg btn-outline-success waves-effect">Register</button>
+         	<button type="button" class="btn btn-lg btn-outline-warning waves-effect" routerLink="/login">Cancel</button>
+         </div>			
+   </form>
 </div>

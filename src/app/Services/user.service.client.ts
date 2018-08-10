@@ -15,19 +15,20 @@ export class UserService {
 
   constructor(private sharedService: SharedService, private router: Router, private http: Http) { }
 
-// login(username: String, password: String) {
-//  this.options.withCredentials = true; // jga
-//  const user = {
-//    username : username,
-//    password : password
-//  };
-//  // console.log(this.baseUrl);
+
+loginForm(defaultFormEmail: String, defaultFormPass: String) {
+ // this.options.withCredentials = true; // jga
+ const user = {
+   email : defaultFormEmail,
+   password : defaultFormPass
+ };
+ // console.log(this.baseUrl);
 //  return this.http.post(this.baseUrl + '/api/login', user, this.options).pipe(map(
 //      (res: Response) => {
 //        return res.json();
 //      }
 //    ));
-// }
+}
 
 
 

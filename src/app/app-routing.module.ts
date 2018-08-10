@@ -24,7 +24,7 @@ const APP_ROUTES : Routes = [
   { path : '' , redirectTo: '/home', pathMatch: 'full'},
   { path : 'login' , component: LoginComponent},
   { path : 'register' , component: RegisterComponent},
-  { path : 'profile', component: ProfileComponent},
+  { path : 'user', component: ProfileComponent},
   { path : 'home' , component: HomeComponent},
   ];
 

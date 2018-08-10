@@ -3,6 +3,16 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Routing } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
+
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
@@ -30,16 +40,6 @@ import { SharedService } from './Services/shared.service.client';
     WebsiteNewComponent,
     WebsiteListComponent,
     WebsiteEditComponent,
-    // PageNewComponent,
-    // PageEditComponent,
-    // PageListComponent,
-    // WidgetChooserComponent,
-    // WidgetEditComponent,
-    // WidgetListComponent,
-    // WidgetHeaderComponent,
-    // WidgetImageComponent,
-    // WidgetYoutubeComponent,
-    // FlickrImageSearchComponent
   ],
 
   imports: [
@@ -48,19 +48,18 @@ import { SharedService } from './Services/shared.service.client';
     HttpModule,
     Routing, 
     MDBBootstrapModule.forRoot(),
-  
+    BrowserAnimationsModule, 
+    MatMenuModule, MatToolbarModule,
+    MatCardModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+
   ],
   providers: [  
   UserService, 
   SharedService,
   // WebsiteService, 
-  // PageService, 
-
-  // WidgetService, 
-  // FlickrService, 
- 
-  // AuthGuard 
-  // AdminGuard
+  // AuthGuard
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
  

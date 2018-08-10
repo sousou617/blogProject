@@ -4,6 +4,7 @@ import { UserService } from '../../../Services/user.service.client';
 import { SharedService } from '../../../Services/shared.service.client';
 import { User } from '../../../Models/user.model.client';
 import { Router } from '@angular/router';
+import {MatDialog} from '@angular/material';
 
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -15,47 +16,31 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-@ViewChild('f') loginForm: NgForm;
+// @ViewChild('f') 
+ constructor(private userService: UserService, private router: Router, private sharedService: SharedService) { }
 
+  // login: NgForm;
   username: string;
   password: string;
-  errorFlag: boolean;
 
-  
-  constructor(private userService: UserService, private router: Router, private sharedService: SharedService) { }
+login() {
+  const user = {
+    username: this.username,
+    password: this.password,
+  }
+}
 
-  
-  // loginForm: FormGroup; constructor(private fb: FormBuilder) {
-  //   this.loginForm = fb.group({
-  //       defaultFormEmail: ['', Validators.required],
-  //       defaultFormPass: ['', [Validators.required, Validators.minLength(8)]]
-  //     });
-  // }
 
+ // login() : void {
+ //   if(this.username == 'admin' && this.password == 'admin') {
+ //     this.router.navigate(['home']);
+ //   } else {
+ //     alert('Invalid credentials');
+ //   }
+ // }
 
   ngOnInit() {
-    
-  }
+ }
 
-  loginForm() {
-
-    this.username = this.loginForm.value.username;
-    this.password = this.loginForm.value.password;
-    // console.log('data', this.username);
-    this.userService.loginForm(this.username, this.password).subscribe(
-      (user: User) => {
-        if(!user) {
-          this.errorFlag = true;
-        } else {
-          this.errorFlag = false;
-          this.sharedService.user = user;
-          this.router.navigate(['user']);
-        }
-      },
-      (error: any) => {
-        this.errorFlag = true;
-      }
-    );
-  }
 
 }

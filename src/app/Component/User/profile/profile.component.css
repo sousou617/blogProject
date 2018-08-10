@@ -1,0 +1,19 @@
+
+.navbar {
+	background-color: #3F3B3B;
+
+}
+
+
+.ig-scroll {
+	flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+	display: table-row;
+	
+}
