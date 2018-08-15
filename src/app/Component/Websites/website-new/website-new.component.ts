@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { WebsiteService } from '../../../services/website.service.client';
+import { ActivatedRoute, Router } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { Website } from '../../../models/website.model.client';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-website-new',
@@ -7,9 +12,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsiteNewComponent implements OnInit {
 
-  constructor() { }
+// @ViewChild('f') websiteForm: NgForm;
+
+uid: string;
+websites: Website[];
+name: string;
+description: string;
+
+  constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
+  // create() {
+  //   this.name = this.websiteForm.value.name;
+  //   this.description = this.websiteForm.value.description;
+  //   const newWebsite: Website = {
+  //     name: this.name,
+  //     developerId: this.uid,
+  //     description: this.description
+  //   };
+  //   this.websiteService.createWebsite(this.uid, newWebsite).subscribe(
+  //     (website: Website) => {
+  //       this.router.navigate(['user', this.uid, 'website']);
+  //     }
+  //   );
+
+  // }
 
   ngOnInit() {
+  // 	this.activatedRoute.params.subscribe(params => {
+  // 		this.uid = params['uid'];
+  // 		this.websiteService.findWebsitesByUser(this.uid).subscribe(
+  //       (website: Website) => {
+  //       }
+  //      );
+  // 	  }
+  //   );
   }
+
 
 }

@@ -1,3 +1,27 @@
-<p>
-  website-list works!
-</p>
+
+
+	<nav class="navbar navbar-dark cb-gray fixed-top">
+  		<!--<a class="navbar-brand"</a>-->
+  		<div class="container">
+  			<a routerLink="/user"><i class="fas fa-arrow-left cb-color-white"></i></a>
+  			<a routerLink="/user/{{uid}}/website" class="cb-align-center cb-color-white"><b>Websites</b></a>
+  			<a routerLink="/user/{{uid}}/website/new"><i class="fas fa-plus cb-color-white"></i></a>
+  		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let website of websites">
+				<a routerLink="/user/{{uid}}/website/{{website._id}}/page"><b>{{website.name}}</b></a>
+				<a class="float-right" routerLink="/user/{{uid}}/website/{{website._id}}">
+				<i class="fas fa-cogs"></i></a>
+			</li>
+		</ul>
+	</div>
+
+		<nav class="navbar navbar-dark cb-gray fixed-bottom">
+			<div class="cb-width">
+				<a class="cb-color-white" routerLink="/user/{{uid}}"><i class="fas fa-user float-right"></i></a>
+			</div>
+		</nav>
+

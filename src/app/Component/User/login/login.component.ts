@@ -1,12 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UserService } from '../../../Services/user.service.client';
-import { SharedService } from '../../../Services/shared.service.client';
+import {SharedService} from '../../../Services/shared.service.client';
 import { User } from '../../../Models/user.model.client';
 import { Router } from '@angular/router';
-import {MatDialog} from '@angular/material';
 
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -16,31 +14,47 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-// @ViewChild('f') 
- constructor(private userService: UserService, private router: Router, private sharedService: SharedService) { }
+  @ViewChild('f') loginForm: NgForm;
 
-  // login: NgForm;
   username: string;
   password: string;
+  errorFlag: boolean;
+  // errorMsg = 'Invalid username or password!';
+  // userService: UserService;
+  // router: Router;
 
-login() {
-  const user = {
-    username: this.username,
-    password: this.password,
+  constructor(private userService: UserService, private router: Router, private sharedService: SharedService) { }
+
+  ngOnInit() { }
+
+  login() {
+// fetching data from loginForm
+    this.username = this.loginForm.value.username;
+    this.password = this.loginForm.value.password;
+    // console.log('data', this.username);
+
+// calling client side userservice to send login info.
+    this.userService.login(this.username, this.password).subscribe(
+      (user: User) => {
+        if(!user) {
+          this.errorFlag = true;
+        } else {
+          this.errorFlag = false;
+          this.sharedService.user = user;
+          this.router.navigate(['user']);
+        }
+      },
+      (error: any) => {
+        this.errorFlag = true;
+        // console.log(error);
+      }
+    );
   }
-}
-
-
- // login() : void {
- //   if(this.username == 'admin' && this.password == 'admin') {
- //     this.router.navigate(['home']);
- //   } else {
- //     alert('Invalid credentials');
- //   }
- // }
-
-  ngOnInit() {
- }
-
 
 }
+
+
+
+
+
+

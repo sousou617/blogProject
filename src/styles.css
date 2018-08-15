@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
 
 /* Color1(whitesmoke)
@@ -28,14 +27,12 @@ RGB: 223 110 105 */
 *, body {
  		margin: 0;
         padding: 0;
-        /* border: 0; */
+        border: 0;
         max-width: 100%;
         background-color: #f4f4f4;
         font-family: 'Roboto', sans-serif;
-}
+} 
 
-.home-login {
-	/* background-color:  #f4f4f4; */
-}
+
 
 

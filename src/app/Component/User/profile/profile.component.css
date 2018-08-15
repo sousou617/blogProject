@@ -1,19 +1,31 @@
 
-.navbar {
-	background-color: #3F3B3B;
 
+body {
+	background-color: #f4f4f4;
 }
-
-
-.ig-scroll {
-	flex-wrap: wrap;
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-footer {
-	display: table-row;
+ nav h4 {
+ 	text-align: center;
+ 	padding-top: 10px;
+ 	font-size: 25px;
+ }
+.card {
+	width: 23rem;
+	height: 28rem;
+	background-color: white;
 	
+}
+
+.user-form {
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+	position: relative;
+	z-index: 10;
+	/* background: rgba(255,255,255,0.7); */
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 20px;
+	text-align: center;
+	padding-bottom: 10px;
+	/* box-sizing: border-box; */
 }

@@ -1,16 +1,17 @@
 <body class="home-login">
-  
+
 
 <div class="form-inline">
- 
+      <div class="container-fluid">
         <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
- 
+      </div>
 
-        <div *ngIf="errorFlag" class="alert alert-danger">Invalid username or password</div>
-
+        
     <!-- Login form -->
     <form class="login-form card shadow p-3 mb-5 bg-info rounded" (ngSubmit)="login()" #f="ngForm">
       <h1 class="login-txt">Login</h1>
+      <div *ngIf="errorFlag" class="alert alert-danger">Invalid username or password</div>
+
 
 <!-- USERNAME -->
         <div class="form-group row">
@@ -23,7 +24,8 @@
             #username="ngModel"
             ngModel
             />
-        </div>
+        </div>            
+
         <span class="alert" *ngIf="username.invalid && username.touched">Please enter username!</span>
 
 <!-- PASSWORD -->
@@ -51,61 +53,3 @@
 
 
 </body>
-
-
-
-<!-- <map-sidenav-container>
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span><img class="ccd-logo" src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></span>
-    <span class="example-fill-remaining-space"></span>
-    <span class="align-center"></span>
-    <span class="example-spacer"></span>
-
-    <button mat-flat-button color="primary">About</button>
-    <button mat-flat-button color="primary">Contact</button>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-    
- <mat-card class="example-card">
-   <mat-card-header class="mat-display-1">
-     <mat-card-title>Login</mat-card-title>
-   </mat-card-header>
-   <mat-card-content>
-     <form class="example-form">
-       <table class="example-full-width" cellspacing="0">
-         <tr>
-           <td>
-             <mat-form-field class="example-full-width">
-             <input 
-             matInput 
-             placeholder="Username" 
-             [(ngModel)]="username" 
-             name="username" 
-             required>
-             </mat-form-field>
-           </td>
-         </tr>
-         <tr>
-         <td><mat-form-field class="example-full-width">
-           <input 
-           matInput 
-           placeholder="Password" 
-           [(ngModel)]="password"
-           type="password" 
-           name="password" 
-           required>
-         </mat-form-field>
-        </td>
-        </tr>
-        </table>
-     </form>
-     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
-   </mat-card-content>
-
-   <mat-card-actions>
-     <button mat-raised-button (click)="login()" color="primary">Login</button>
-   </mat-card-actions>
- </mat-card>
-</map-sidenav-container> -->

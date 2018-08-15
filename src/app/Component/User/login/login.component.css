@@ -1,11 +1,4 @@
-/* /* /* @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* Nav bar LOGIN page */
-
-/* mat-toolbar {
-	background: url('http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg');
-	background-size: 
-} */
 
 body {
 	margin: 0;
@@ -33,10 +26,15 @@ body {
 	/* box-sizing: border-box; */
 }
 
+.alert {
+	display: flex;
+	text-align: center;
+	color: red;
+}
 .card {
 	width: 23rem;
 	height: 28rem;
-	background-color: 
+	background-color: white;
 }
 .form-group, .row {
 	background-color: white;

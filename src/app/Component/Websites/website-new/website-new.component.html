@@ -1,3 +1,60 @@
-<p>
-  website-new works!
-</p>
+
+
+	<nav class="row navbar navbar-dark cb-gray fixed-top">
+			<!--left nav-->		
+		<div class="col-sm-4 d-none d-sm-block">
+			<div class="container-fluid">
+				<a class="cb-color-white" routerLink="/user/{{uid}}/website"><i class="fas fa-chevron-left cb-color-white"></i></a>
+				<a class="cb-left-padding cb-no-underline" routerLink="/user/{{uid}}/website" class="cb-color-white"><b>Websites</b></a>
+				<a class="cb-color-white float-right" routerLink="/user/{{uid}}/website/new"><i class="fas fa-plus"></i></a>
+			</div>
+		</div>
+			<!--right nav-->
+		<div class="col-sm-8">
+			<div class="container">
+				<a class="cb-color-white cb-no-underline" routerLink="/user/{{uid}}/website/new"><b>New Website</b></a>
+				<button type="submit" class="float-right cb-color-white btn" form="websiteForm" [disabled]="f.invalid"><i class="fas fa-check"></i></button>
+			</div>
+		</div>
+	</nav>
+
+	<div class="row">
+		<!-- left website list -->
+			<div class="col-sm-4 d-none d-sm-block">
+				<div class="container-fluid">
+					<ul class="list-group">
+						<li *ngFor="let website of websites" class="list-group-item d-flex justify-content-between align-items-center">
+							<a routerLink="/user/{{uid}}/website/{{website._id}}/page">{{website.name}}</a>
+							<a class="float-right" routerLink="/user/{{uid}}/website/{{website._id}}"><i class="fas fa-cogs"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>	
+
+				<!-- Right side form -->
+				<div class="col-sm-8">
+					<div class="container">
+						<form id="websiteForm" (ngSubmit)="create()" #f="ngForm">
+							<div class="form-group">
+								<label for="name"><b>Name</b></label>
+								<input class="form-control" type="text" name="name" placeholder="Enter your website name" required ngModel #name="ngModel">
+								<br>
+							</div>
+							<div class="alert alert-warning" *ngIf="name.invalid && name.touched">Name cannot be empty</div>
+							<!--website description-->
+							<div class="form-group">
+								<label><b>Description</b></label>
+								<textarea rows="3" name="description" class="form-control" placeholder="Input your description for this website" ngModel #description="ngModel"></textarea>
+							</div>
+							<button [disabled]="f.invalid" class="btn btn-success btn-block cb-submit-btn" type="submit">Submit</button> 
+							<button type="button" class="btn btn-danger btn-block cb-submit-btn" routerLink="/user/{{uid}}/website">Cancel</button> 
+						</form>
+					</div>
+				</div>
+	</div>
+
+		<nav class="navbar navbar-dark cb-gray fixed-bottom">
+			<div class="cb-width">
+			<a class="cb-color-white" routerLink="/user/{{uid}}"><i class="fas fa-user float-right"></i></a>
+			</div>
+		</nav>

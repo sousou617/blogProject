@@ -6,14 +6,15 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { User } from '../models/user.model.client';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -27,6 +28,9 @@ import { WebsiteEditComponent } from './Component/Websites/website-edit/website-
 
 import { UserService } from './Services/user.service.client';
 import { SharedService } from './Services/shared.service.client';
+import { AuthGuard } from './Services/auth-guard.services';
+
+// import { Website } from './Models/website.model.client';
 
 
 
@@ -58,8 +62,8 @@ import { SharedService } from './Services/shared.service.client';
   providers: [  
   UserService, 
   SharedService,
-  // WebsiteService, 
-  // AuthGuard
+  // Website, 
+  AuthGuard
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
  
