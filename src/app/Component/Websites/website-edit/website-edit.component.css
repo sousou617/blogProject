@@ -1,0 +1,170 @@
+.cd-icon {	
+/* 	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;	
+	animation-delay: 1s; */
+	display: flex;
+  	height: 250px;
+  	justify-content: center;
+  	align-items: center;
+}
+
+
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+/* body{
+	padding-top: 70px;
+	padding-bottom: 70px;
+} */
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #F4F4F4;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div, .container {
+	display: flex;
+	margin-left: 15px;
+	margin-right: auto;
+}
+
+
+.cb-no-underline a:hover{
+	text-decoration: none;
+}
+
+
+.cb-black{
+	color: black;
+}
+
+
+.cb-left-padding{
+	padding-left: 20px;
+}
+
+.sw-front{
+	z-index: 2;
+}
+
+
+
+
+/* button {
+ 	max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+} */
+
+
+/*.cb-left-padding{
+	padding-left: 20px;
+}*/
+.list-group-item:hover{
+	color: #0B41C1;
+	text-decoration: none;
+	text-align: left;
+}
+
+.list-group:hover{
+	text-decoration: none;
+	color: #0B41C1;
+
+}
+
+a:hover{
+	text-decoration: none;
+	color: #0248EF;
+}
+
+.form button {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	width: 100%;
+	/* border: 0; */
+	padding: 10px;
+	font-size: 16px;
+	letter-spacing: 0.5em;
+	
+}
+
+.cb-btn-t {
+	background-color: transparent;
+	color: #0B41C1;
+}
+
+
+.cb-celtics-grn{
+	color: #4cbb17;
+}
+
+.cb-absolute-right{
+	position: absolute;
+	right: 15px;
+}
+
+.cb-width{
+	width: 100%;
+	padding-top: 5px;
+}
+
+.cb-align-center{
+	text-align: center;
+}
+
+.cb-vl{
+	border-left: 6px black;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.cb-float-right{
+    float: right;
+}
+
+.cb-80-width{
+  width: 80%;
+}
+
+.cb-font-variant{
+  font-variant: small-caps;
+}
+
+.cb-list-style{
+  list-style: none;
+}
+
+
+.cb-font-white{
+	color: white;
+}
+
+
+/* .animate-bottom {
+	position: relative;
+	animation: animate-bottom 0.5;
+}
+
+@keyframes animate-bottom {
+	from {
+		bottom: -300px;
+	}
+	to {
+		bottom: 0;
+	}
+} */
+

@@ -1,9 +1,11 @@
 
 
-	<nav class="row navbar navbar-dark cb-gray fixed-top">
+	<div class="container-fluid">
+        <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
+    </div>
 			<!--left nav-->		
 		<div class="col-sm-4 d-none d-sm-block">
-			<div class="container-fluid">
+			<div class="container">
 				<a class="cb-color-white" routerLink="/user/{{uid}}/website"><i class="fas fa-chevron-left cb-color-white"></i></a>
 				<a class="cb-left-padding cb-no-underline" routerLink="/user/{{uid}}/website" class="cb-color-white"><b>Websites</b></a>
 				<a class="cb-color-white float-right" routerLink="/user/{{uid}}/website/new"><i class="fas fa-plus"></i></a>
@@ -16,7 +18,7 @@
 				<button type="submit" class="float-right cb-color-white btn" form="websiteForm" [disabled]="f.invalid"><i class="fas fa-check"></i></button>
 			</div>
 		</div>
-	</nav>
+
 
 	<div class="row">
 		<!-- left website list -->

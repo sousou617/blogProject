@@ -16,7 +16,9 @@ import { RegisterComponent } from './Component/User/register/register.component'
 import { WebsiteNewComponent } from './Component/Websites/website-new/website-new.component';
 import { WebsiteListComponent } from './Component/Websites/website-list/website-list.component';
 import { WebsiteEditComponent } from './Component/Websites/website-edit/website-edit.component';
-
+import { PageEditComponent } from './Component/Page/page-edit/page-edit.component';
+import { PageListComponent } from './Component/Page/page-list/page-list.component';
+import { PageNewComponent } from './Component/Page/page-new/page-new.component';
 
 
 
@@ -26,10 +28,12 @@ const APP_ROUTES : Routes = [
   { path : 'register' , component: RegisterComponent},
   { path : 'user', component: ProfileComponent, canActivate: [AuthGuard]},
   { path : 'home' , component: HomeComponent},
-  { path : 'user/:uid/website' , component: WebsiteListComponent},
-  { path : 'user/:uid/website/new' , component: WebsiteNewComponent},
-  { path : 'user/:uid/website/:wid' , component: WebsiteEditComponent},
-  
+  { path : 'user/:uid/website' , component: WebsiteListComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/website/new' , component: WebsiteNewComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/website/:wid' , component: WebsiteEditComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/website/:wid/page', component : PageListComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/website/:wid/page/new', component : PageNewComponent, canActivate: [AuthGuard]},
+  { path : 'user/:uid/website/:wid/page/:pid', component : PageEditComponent, canActivate: [AuthGuard]},
   ];
 
 // @NgModule({

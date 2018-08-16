@@ -1,22 +1,24 @@
 
-
-	 <nav class="row navbar navbar-dark cb-gray fixed-top">
+	<div class="container-fluid">
+        <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
+    </div>
+	 <!-- <nav class="row navbar navbar-dark cb-gray fixed-top"> -->
 <!--		left-side nav -->
 		<div class="col-sm-4 d-none d-sm-block">	
-			<div class="container-fluid">
+			<div class="container">
 				<a class="cb-color-white" routerLink="/user/{{uid}}/website"><i class="fas fa-chevron-left cb-color-white"></i></a>
-				<a class="cb-color-white cb-left-padding cb-no-underline" routerLink="/user/{{uid}}/website"><b>Websites</b></a>
+				<a class="cb-color-white cb-left-padding cb-no-underline" routerLink="/user/{{uid}}/website"><b>Blog</b></a>
 				<a class="cb-color-white float-right" routerLink="/user/{{uid}}/website/new"><i class="fa fa-plus"></i></a>
 			</div>
 		</div> 
 		<!--right-side nav-->
 		<div class="col-sm-8">
 			<div class="container">
-				<a class="cb-color-white cb-no-underline" routerLink="/user/{{uid}}/website/{{wid}}"><b>Edit Website</b></a>
+				<a class="cb-color-white cb-no-underline" routerLink="/user/{{uid}}/website/{{wid}}"><b>Edit Blog</b></a>
 				<button type="submit" class="float-right cb-color-white btn"><i class="fas fa-check"></i></button>
 			</div>
 		</div>
-	</nav>
+	<!-- </nav> -->
 
 		
 		<div class="row">
@@ -43,12 +45,13 @@
 							</div>
 						<br>
 							<div class="form-group">
-								<label for="website-name"><b>Website Description</b></label>
-								<textarea ngModel="{{website.description}}" #description="ngModel" rows="3" class="form-control" name="description" placeholder="Enter your description for this website"></textarea>
-							</div>
+								<label for="website-name"><b>Blog Description</b></label>
+								<textarea ngModel="{{website.description}}" #description="ngModel" rows="10" class="form-control" name="description" placeholder="Enter your description for this blog"></textarea>
+							</div><br>
 							<div>
-							<button (click)="delete()" type="button" class="btn btn-danger btn-block cb-submit-btn">Delete</button> 
-							<button type="submit"  class="btn btn-primary btn-block cb-submit-btn">Update</button>
+							<button (click)="delete()" type="button" class="btn btn-danger btn-lg cb-submit-btn">Delete</button> 
+							<button type="button" class="btn btn-primary btn-lg
+							 cb-submit-btn">Update</button>
 							</div>
 						</form>
 					</div>
@@ -56,11 +59,11 @@
 		</div>
 	
 	
-		<nav class="navbar navbar-dark cb-gray fixed-bottom">
+
 			<div class="cb-width">
 			<a class="cb-color-white" routerLink="/user/{{uid}}"><i class="fas fa-user float-right"></i></a>
 			</div>
-		</nav>
+	
 
 
 

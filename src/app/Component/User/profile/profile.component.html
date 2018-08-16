@@ -1,7 +1,7 @@
- <nav class="navbar navbar-light navbar-brand fixed-top">
-          <h4>Cupcakes & Dirt Blog</h4>
-        <button type="submit" form="profileForm" [disabled]="f.invalid"><i class="glyphicon glyphicon-ok"></i></button>
-</nav>
+
+    <div class="container-fluid">
+        <a class="cd-icon animated bounce" routerLink="#"><img src="http://i1253.photobucket.com/albums/hh583/cherylrbrown617/CandDgray_zpsqkhflphn.jpg"></a>
+    </div>
 
 <div class="container">
 
@@ -10,6 +10,7 @@
     <div *ngIf="submitSuccess" class="alert alert-success">Update successful!</div>
 
   <form class="user-form card shadow p-3 mb-5 bg-info rounded" (ngSubmit)="update()" id="profileForm" #f="ngForm">
+    <h1 class="reg-txt">Registration Form</h1>
     <div class="form-group">
       <label for="username"><b>Username</b></label>
       <input 
@@ -50,18 +51,11 @@
       class="form-control"
       ngModel="{{user.lastName}}"
       #lastName="ngModel">
-    </div>
-
-      <button type="button" class="btn btn-primary btn-lg cb-submit-btn" data-toggle="button" routerLink="/user/{{uid}}/website">Websites</button>
+    </div><br>
+      <button type="button" class="btn btn-primary btn-lg cb-submit-btn" data-toggle="button" routerLink="/user/{{uid}}/website">Blog</button>
       
       <button type="button" class="btn btn-danger btn-lg cb-submit-btn" data-toggle="button" (click)="logout()">Logout</button>
   </form>
 </div>
 
 
-  <!-- Bottom Navbar -->
-<!--     <nav class="navbar navbar-dark cb-gray fixed-bottom">
-      <div class="cb-width">
-      <a class="cb-font-white cb-float-right" routerLink="/user/{{uid}}"><i class="fas fa-user"></i></a>
-      </div>
-    </nav> -->

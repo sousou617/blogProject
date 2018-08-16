@@ -1,0 +1,17 @@
+.cd-icon {	
+/* 	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;	
+	animation-delay: 1s; */
+	display: flex;
+  	height: 250px;
+  	justify-content: center;
+  	align-items: center;
+}
+
+div, a {
+	text-transform: capitalize;
+	font-size: 15px;
+	color: balck;
+}

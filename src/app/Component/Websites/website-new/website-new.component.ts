@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { WebsiteService } from '../../../services/website.service.client';
+import { WebsiteService } from '../../../Services/website.service.client';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Injectable } from '@angular/core';
-import { Website } from '../../../models/website.model.client';
+import { Website } from '../../../Models/website.model.client';
 import { NgForm } from '@angular/forms'
 
 @Component({
@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms'
 })
 export class WebsiteNewComponent implements OnInit {
 
-// @ViewChild('f') websiteForm: NgForm;
+@ViewChild('f') websiteForm: NgForm;
 
 uid: string;
 websites: Website[];
@@ -21,31 +21,31 @@ description: string;
 
   constructor(private websiteService: WebsiteService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
-  // create() {
-  //   this.name = this.websiteForm.value.name;
-  //   this.description = this.websiteForm.value.description;
-  //   const newWebsite: Website = {
-  //     name: this.name,
-  //     developerId: this.uid,
-  //     description: this.description
-  //   };
-  //   this.websiteService.createWebsite(this.uid, newWebsite).subscribe(
-  //     (website: Website) => {
-  //       this.router.navigate(['user', this.uid, 'website']);
-  //     }
-  //   );
+  create() {
+    this.name = this.websiteForm.value.name;
+    this.description = this.websiteForm.value.description;
+    const newWebsite: Website = {
+      name: this.name,
+      developerId: this.uid,
+      description: this.description
+    };
+    this.websiteService.createWebsite(this.uid, newWebsite).subscribe(
+      (website: Website) => {
+        this.router.navigate(['user', this.uid, 'website']);
+      }
+    );
 
-  // }
+  }
 
   ngOnInit() {
-  // 	this.activatedRoute.params.subscribe(params => {
-  // 		this.uid = params['uid'];
-  // 		this.websiteService.findWebsitesByUser(this.uid).subscribe(
-  //       (website: Website) => {
-  //       }
-  //      );
-  // 	  }
-  //   );
+  	this.activatedRoute.params.subscribe(params => {
+  		this.uid = params['uid'];
+  		this.websiteService.findWebsitesByUser(this.uid).subscribe(
+        (website: Website) => {
+        }
+       );
+  	  }
+    );
   }
 
 

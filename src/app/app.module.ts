@@ -25,10 +25,14 @@ import { RegisterComponent } from './Component/User/register/register.component'
 import { WebsiteNewComponent } from './Component/Websites/website-new/website-new.component';
 import { WebsiteListComponent } from './Component/Websites/website-list/website-list.component';
 import { WebsiteEditComponent } from './Component/Websites/website-edit/website-edit.component';
+import { PageEditComponent } from './Component/Page/page-edit/page-edit.component';
+import { PageListComponent } from './Component/Page/page-list/page-list.component';
+import { PageNewComponent } from './Component/Page/page-new/page-new.component';
 
 import { UserService } from './Services/user.service.client';
 import { SharedService } from './Services/shared.service.client';
 import { AuthGuard } from './Services/auth-guard.services';
+import {WebsiteService} from './Services/website.service.client'
 
 // import { Website } from './Models/website.model.client';
 
@@ -44,6 +48,9 @@ import { AuthGuard } from './Services/auth-guard.services';
     WebsiteNewComponent,
     WebsiteListComponent,
     WebsiteEditComponent,
+    PageEditComponent,
+    PageListComponent,
+    PageNewComponent,
   ],
 
   imports: [
@@ -62,7 +69,7 @@ import { AuthGuard } from './Services/auth-guard.services';
   providers: [  
   UserService, 
   SharedService,
-  // Website, 
+  WebsiteService, 
   AuthGuard
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

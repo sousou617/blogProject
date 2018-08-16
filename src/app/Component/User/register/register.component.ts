@@ -33,7 +33,8 @@ export class RegisterComponent implements OnInit {
     this.username = this.registerForm.value.username;
     this.password = this.registerForm.value.password;
     this.verifyPassword = this.registerForm.value.verifyPassword;
-    
+    console.log(this.password);
+    console.log(this.verifyPassword);
     if(this.password !== this.verifyPassword) {
         this.passwordError = true;
     } else {

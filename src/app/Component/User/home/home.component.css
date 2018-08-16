@@ -8,8 +8,6 @@
 
 
 #showcase {
-  /* z-index: -1000; */
-  /* height: 75vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,9 +15,13 @@
   padding: 0 20px;
 }
 
- #showcase h1{
+#showcase h1{
   font-size: 50px;
   text-align: center;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 #showcase p{
   font-size: 20px;
@@ -28,15 +30,26 @@
   margin-right: 30px;
   text-align: center;
 }
-header .btn {
+
+.reg-hm {
+  color: #42DCA3;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn {
   font-size: 23px;
-  padding: 5px 5px;
+  padding: 5px;
   text-decoration: none;
   text-align: center;
-  color: #f4f4f4;
+  /* color: #f4f4f4; */
   border: #f4f4f4 1px solid;
   border-radius: 10px;
   margin-top: 20px;
+  color: #42DCA3;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover{
@@ -81,3 +94,7 @@ footer {
   line-height: 25px;
   border-radius: 4px;
 }  */
+
+
+
+

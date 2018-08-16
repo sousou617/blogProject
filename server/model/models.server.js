@@ -14,15 +14,3 @@ var db = mongoose.connect(connectionString, { useNewUrlParser: true });
 
 module.exports = db;
 
-
-// {
-//     "_id": "blogproject.BlogAdmin",
-//     "user": "BlogAdmin",
-//     "db": "blogproject",
-//     "roles": [
-//         {
-//             "role": "dbOwner",
-//             "db": "blogproject"
-//         }
-//     ]
-// }

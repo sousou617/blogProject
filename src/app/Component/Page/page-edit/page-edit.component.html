@@ -1,0 +1,38 @@
+
+
+	<nav class="navbar navbar-dark fixed-top cb-gray">
+		<a class="cb-color-white" routerLink="/user/{{uid}}/website/{{wid}}/page"><i class="fas fa-chevron-left"></i></a>
+
+		<div class="cb-left-padding">
+			<a class="cb-color-white cb-no-underline" routerLink="/user/{{uid}}/website/{{wid}}/page/{{pid}}"><b>Edit Page</b></a>
+		</div>
+
+		<button type="submit" [disabled]="f.invalid" form="pageForm" class="cb-color-white float-right"><i class="fas fa-check"></i></button>
+	</nav>
+
+	<div class="container">
+	<form id="pageForm" (ngSubmit)="update()" #f="ngForm">
+		<!--widget name-->
+		<div class="form-group">
+			<label for="name"><b>Name</b></label>
+			<input required ngModel="{{page.name}}" #name="ngModel" type="text" name="name" class="form-control" placeholder="Blog Post">
+		</div>
+		<div *ngIf="name.invalid && name.touched" class="alert alert-warning">Name cannot be empty</div>
+
+		<div class="form-group">
+			<label for="text"><b>Description</b></label>
+			<input ngModel={{page.description}} #description="ngModel" type="text" name="description" class="form-control" placeholder="Enter your page description..." value="Blog">
+		</div>
+
+		<div>
+			<button class="btn btn-primary btn-block" type="submit" [disabled]="f.invalid">Update</button>
+			<button class="btn btn-danger btn-block cb-submit-btn" type="button" (click)="remove()">Delete</button> 
+		</div>
+	</form>		
+			<!-- Bottom Navbar -->
+	<nav class="navbar navbar-dark cb-gray fixed-bottom">
+		<div class="cb-width">
+			<a routerLink="/user/{{uid}}" class="cb-float-right cb-color-white"><i class="fas fa-user"></i></a>
+		</div>
+	</nav>
+	</div>
