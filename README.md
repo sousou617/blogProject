@@ -1,6 +1,11 @@
 # BlogProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+It is a family-oriented blog about keeping connected with family and friends.
+
+## Motivation
+
+My close family do not live nearby, so I wanted to make something where they have a semi-private access to connect with my son and I.
 
 ## Development server
 
@@ -25,4 +30,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# blogProject
+
