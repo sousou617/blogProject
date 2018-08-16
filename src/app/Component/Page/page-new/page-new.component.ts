@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
-import { PageService} from '../../../services/page.service.client';
-import { Page } from '../../../models/page.model.client';
+import { PageService} from '../../../Services/page.service.client';
+import { Page } from '../../../Models/page.model.client';
 import { NgForm } from '@angular/forms';
 
 @Component({

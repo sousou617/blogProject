@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
-import { PageService } from '../../../services/page.service.client';
-import { Page } from '../../../models/page.model.client';
+import { PageService } from '../../../Services/page.service.client';
+import { Page } from '../../../Models/page.model.client';
 
 @Component({
   selector: 'app-page-list',
